@@ -1,0 +1,30 @@
+<html>
+<head>
+<title>POLL/VOTE APP</title>
+
+
+<style>
+*{font-size:25px;}
+.nav{background-color:blue;}
+.nav a {color:yellow;text-decoration:none;margin:50px;}
+textarea {resize:none;}
+
+body {background-color:lightgrey;}
+</style>
+</head>
+
+<body>
+<center>
+<div class ="nav">
+
+<a href="{% url 'home'    %}">HOME</a>
+<a href="{% url   'create' %}">CREATE POLLS</a>
+
+</div>
+
+{%  block content  %}
+{% endblock %}
+
+</center>
+</body>
+</html>
