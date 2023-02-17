@@ -1,0 +1,14 @@
+{% extends "base.html  "%}
+{%  block content %}
+
+<h1>Create new poll</h1>
+
+<form method="POST">
+{%  csrf_token  %}
+{{ fm.as_p }}
+<input type = "submit" value="save" />
+</form>
+{{msg}}
+
+
+{%   endblock  %}

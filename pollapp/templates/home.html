@@ -1,0 +1,14 @@
+{% extends "base.html  "%}
+{%  block content %}
+
+<h1 style="color:red">LISTED AVAILABLE POLLS<h1>
+{% for d in data  %}
+<h2>{{d.qts}}</h2>
+<button><a href="{% url 'vote' d.id   %}"> Vote </a></button>
+<button><a href="{% url 'result'  d.id  %}"> View results</a></button>
+<button><a href="{% url 'delete'  d.id  %}"> Delete</a></button>
+{%   empty  %}
+<h2>No polls available</h2>
+{% endfor  %}
+
+{% endblock %}

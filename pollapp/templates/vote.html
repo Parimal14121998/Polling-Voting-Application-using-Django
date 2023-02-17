@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{%  block content %}
+
+<h1 style="color:red"> Caste your vote here</h1>
+<h2> {{ data.qts }} </h2>
+
+<form method ="POST">
+{% csrf_token %}
+<input type="radio" name="r" value="op1" required> {{ data.op1 }}</input>
+</br></br>
+<input type="radio" name="r" value="op2" required> {{ data.op2 }}</input>
+</br></br>
+<input type="radio" name="r" value="op3" required> {{ data.op3 }}</input>
+</br></br>
+<input type = "submit" />
+<input type="button" value="Back" onclick="history.back()">
+</form>
+
+{% endblock %}

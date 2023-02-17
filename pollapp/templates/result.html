@@ -1,0 +1,14 @@
+{% extends "base.html  "%}
+{%  block content %}
+
+<h1 style="color:red"> Poll result </h1>
+<h2> {{ data.qts }} </h2>
+<div style ="border-style:solid;border-color:red;border-width:10px;border-radius:30px;width:50%">
+<h3>{{ data.op1 }} ----> {{ data.op1c }}</h3>
+<h3>{{ data.op2 }} ----> {{ data.op2c }}</h3>
+<h3>{{ data.op3 }} ----> {{ data.op3c }}</h3>
+</div>
+<br><br>
+<input type="button" value="Back" onclick="history.back()">
+
+{% endblock %}
